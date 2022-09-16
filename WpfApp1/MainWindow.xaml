@@ -6,8 +6,15 @@
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        <Button Content="Button" Margin="470,168,206,218" Click="Button_Click"/>
+    <Grid Background="#FFA4C0ED">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="247*"/>
+            <ColumnDefinition Width="553*"/>
+        </Grid.ColumnDefinitions>
+        <Button x:Name="button" Content="Button" Margin="223,168,206,218" Click="Button_Click" Grid.Column="1" Background="#FFADD8A1" FontFamily="Cascadia Code"/>
+        <Label x:Name="label" Content="輸入一個正整數N:" HorizontalAlignment="Left" Height="29" Margin="106,178,0,0" VerticalAlignment="Top" Width="178" Grid.ColumnSpan="2" FontSize="18" FontFamily="Cascadia Code"/>
+        <TextBox x:Name="textbox" Grid.Column="1" HorizontalAlignment="Left" Height="44" Margin="37,173,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="171"  FontSize="18" FontFamily="Cascadia Code"/>
+        <TextBox x:Name="textbox2" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="104" Margin="237,269,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="316"/>
 
     </Grid>
 </Window>
